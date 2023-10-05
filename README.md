@@ -3,5 +3,5 @@ Hier sind alle Coding-Challenges Lösungen in Java hochgeladen, die ich bisher g
 
 ## work in progress
 |Aufgabe|Status|
-|-------|:---------:|
+|:--------:|:-----------:|
 |Palindrome|Abgeschlossen|
