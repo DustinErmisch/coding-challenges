@@ -1,5 +1,24 @@
 package countTheNumberOfDuplicateCharacters;
 
+/**
+ * Count the Number of Duplicate Characters
+ * 
+ * Create a function that takes a string and returns the number of alphanumeric
+ * characters that occur more than once. Examples
+ * 
+ * duplicateCount("abcde") ➞ 0
+ * 
+ * duplicateCount("aabbcde") ➞ 2
+ * 
+ * duplicateCount("Indivisibilities") ➞ 2
+ * 
+ * duplicateCount("Aa") ➞ 0 // Case sensitive
+ * 
+ * Notes
+ * 
+ * Duplicate characters are case sensitive. The input string will contain only
+ * alphanumeric characters.
+ */
 public class CountTheNumberOfDuplicateCharacters {
 
 	public static void main(String[] args) {
@@ -32,7 +51,8 @@ public class CountTheNumberOfDuplicateCharacters {
 				}
 			}
 		}
-		//die Leange des neuen word2 mit den doppelt vorkommenden Buchstaben ist dann deren Anzahl		
+		// die Leange des neuen word2 mit den doppelt vorkommenden Buchstaben ist dann
+		// deren Anzahl
 		return word2.length();
 	}
 

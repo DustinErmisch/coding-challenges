@@ -1,5 +1,30 @@
 package recursionInterDigitsCounts;
 
+/**
+ * Recursion: Integer Digits Count
+ * 
+ * Create a function that recursively counts the integer's number of digits.
+ * Examples
+ * 
+ * count(318) ➞ 3
+ * 
+ * count(-92563) ➞ 5
+ * 
+ * count(4666) ➞ 4
+ * 
+ * count(-314890) ➞ 6
+ * 
+ * count(654321) ➞ 6
+ * 
+ * count(638476) ➞ 6
+ * 
+ * Notes
+ * 
+ * You are expected to solve this challenge via recursion. You can check on the
+ * Resources tab for more details about recursion in Java. An iterative version
+ * of this challenge can be found via this link. A collection of challenges in
+ * recursion can be found via this link.
+ */
 public class RecursionIntegerDigitsCounts {
 	// Rekursion -> Methode ruft sich selbst auf
 	public static void main(String[] args) {
@@ -22,10 +47,10 @@ public class RecursionIntegerDigitsCounts {
 			zahl = zahl / 10;
 
 			/**
-			 * Die count Funktion gibt die Variable ergebnis wieder, bei jedem durchlauf
+			 * Die count Funktion gibt die Variable ergebnis wieder, bei jedem Durchlauf
 			 * ergebnis +1 muss so gemacht werden, weil die Initialisierung so quasi
 			 * ignoriert wird Ausserdem ist das die Rekursion, d.h. die Methode ruft sich
-			 * immer wieder selbst auf, //solange die if Bedingung erfuellt ist
+			 * immer wieder selbst auf, solange die if Bedingung erfuellt ist
 			 */
 			ergebnis = count(zahl) + 1;
 

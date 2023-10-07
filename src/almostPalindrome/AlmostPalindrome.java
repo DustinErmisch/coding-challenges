@@ -1,5 +1,27 @@
 package almostPalindrome;
 
+/**
+ * Almost Palindrome
+ * 
+ * A string is an almost-palindrome if, by changing only one character, you can
+ * make it a palindrome. Create a function that returns true if a string is an
+ * almost-palindrome and false otherwise. Examples
+ * 
+ * almostPalindrome("abcdcbg") ➞ true // Transformed to "abcdcba" by changing
+ * "g" to "a".
+ * 
+ * almostPalindrome("abccia") ➞ true // Transformed to "abccba" by changing "i"
+ * to "b".
+ * 
+ * almostPalindrome("abcdaaa") ➞ false // Can't be transformed to a palindrome
+ * in exactly 1 turn.
+ * 
+ * almostPalindrome("1234312") ➞ false
+ * 
+ * Notes
+ * 
+ * Return false if the string is already a palindrome.
+ */
 public class AlmostPalindrome {
 
 	public static void main(String[] args) {
@@ -16,18 +38,18 @@ public class AlmostPalindrome {
 	}
 
 	public static boolean almostPalindrome(String word) {
-		
+
 		int a = 0;
-		//Schleife bis zu Haelfte des Wortes durchgehen
+		// Schleife bis zu Haelfte des Wortes durchgehen
 		for (int i = 0; i != (word.length() - 1) / 2; i++) {
-			//Wenn der Buchstabe i und der letzte Buchstabe minus i nicht gleich sind a++
+			// Wenn der Buchstabe i und der letzte Buchstabe minus i nicht gleich sind a++
 			if (word.charAt(i) != word.charAt(word.length() - 1 - i)) {
-				//System.out.println(word.charAt(i));
-				//System.out.println(word.charAt(word.length() - 1 - i));
+				// System.out.println(word.charAt(i));
+				// System.out.println(word.charAt(word.length() - 1 - i));
 				a++;
 			}
 		}
-		//wenn a == 1 dann war nur ein Buchstabe nicht gleich return true sonst false
+		// wenn a == 1 dann war nur ein Buchstabe nicht gleich return true sonst false
 		if (a == 1) {
 			return true;
 		}

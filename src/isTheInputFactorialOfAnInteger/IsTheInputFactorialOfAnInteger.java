@@ -1,5 +1,22 @@
 package isTheInputFactorialOfAnInteger;
 
+/**
+ * Is the Input Factorial of an Integer?
+ * 
+ * Create a function that checks if a given integer is exactly the factorial of
+ * an integer or not. true if it is, false otherwise. Examples
+ * 
+ * isFactorial(2) ➞ true // 2 = 2 * 1 = 2!
+ * 
+ * isFactorial(27) ➞ false
+ * 
+ * isFactorial(24) ➞ true // 24 = 4 * 3 * 2 * 1 = 4!
+ * 
+ * Notes
+ * 
+ * No error handling is necessary. Inputs are all positive integers.
+ * Alternatively, you can solve this with a recursive approach.
+ */
 
 public class IsTheInputFactorialOfAnInteger {
 
@@ -59,7 +76,8 @@ public class IsTheInputFactorialOfAnInteger {
 		// array befuellen mit Parameter zahl jeweils -1 im Element
 		array = fillArray(zahl, array, i, j);
 
-		// zahl1 wird mit dem Element i multipliziert solange zahl1 kleiner dem Parameter
+		// zahl1 wird mit dem Element i multipliziert solange zahl1 kleiner dem
+		// Parameter
 		// zahl ist
 		zahl1 = multiplyElements(zahl, zahl1, array, i);
 		if (zahl1 == zahl) {
@@ -81,13 +99,14 @@ public class IsTheInputFactorialOfAnInteger {
 	}
 
 	public static int multiplyElements(int zahl, int zahl1, int[] array, int i) {
-		// zahl1 wird mit dem Element i multipliziert solange zahl1 kleiner dem Parameter
+		// zahl1 wird mit dem Element i multipliziert solange zahl1 kleiner dem
+		// Parameter
 		// zahl ist
 		if (zahl1 < zahl) {
 			zahl1 = zahl1 * array[i];
 			i++;
-			zahl1 = multiplyElements(zahl, zahl1, array, i);	
-		}	
+			zahl1 = multiplyElements(zahl, zahl1, array, i);
+		}
 		return zahl1;
 	}
 }

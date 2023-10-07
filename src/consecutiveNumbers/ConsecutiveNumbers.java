@@ -1,18 +1,17 @@
 package consecutiveNumbers;
-
+/**
+ * Create a function that determines whether elements in array can be rearranged
+ * to form a consecutive list of numbers where each number appears exactly once
+ * Examples: cons([5,1,4,3,2]); = true -> 1,2,3,4,5 
+ * cons([5,1,4,3,2,8]); = false -> 1,2,3,4,5,X,X,8 
+ * cons([5,6,7,8,9,9]); = false -> 5,6,7,8,9,9
+ * cons([7,9,6,4,8,5]); = true -> 4,5,6,7,8,9
+ * cons([14,11,13,10,12,15]); = true -> 10,11,12,13,14,15
+ * 
+ * @param args
+ */
 
 public class ConsecutiveNumbers {
-	/**
-	 * Create a function that determines whether elements in array can be rearranged
-	 * to form a consecutive list of numbers where each number appears exactly once
-	 * Examples: cons([5,1,4,3,2]); = true -> 1,2,3,4,5 
-	 * cons([5,1,4,3,2,8]); = false -> 1,2,3,4,5,X,X,8 
-	 * cons([5,6,7,8,9,9]); = false -> 5,6,7,8,9,9
-	 * cons([7,9,6,4,8,5]); = true -> 4,5,6,7,8,9
-	 * cons([14,11,13,10,12,15]); = true -> 10,11,12,13,14,15
-	 * 
-	 * @param args
-	 */
 
 	public static void main(String[] args) {
 		int[] array1 = { 5, 1, 4, 3, 2 }; //true

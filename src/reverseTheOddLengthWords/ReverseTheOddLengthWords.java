@@ -1,7 +1,22 @@
 package reverseTheOddLengthWords;
 
-
-
+/**
+ * Reverse the Odd Length Words
+ * 
+ * Given a string, reverse all the words which have odd length. The even length
+ * words are not changed. Examples
+ * 
+ * reverseOdd("Bananas") ➞ "sananaB"
+ * 
+ * reverseOdd("One two three four") ➞ "enO owt eerht four"
+ * 
+ * reverseOdd("Make sure uoy only esrever sdrow of ddo length") ➞ "Make sure you
+ * only reverse words of odd length"
+ * 
+ * Notes
+ * 
+ * There is exactly one space between each word and no punctuation is used.
+ */
 public class ReverseTheOddLengthWords {
 
 	public static void main(String[] args) {
@@ -19,7 +34,7 @@ public class ReverseTheOddLengthWords {
 		int j = 0;
 		String wordString;
 		String wordString2 = "";
-	
+
 		String[] words = null;
 		// Anzahl der woerter auslesen
 		for (int i = 0; i < stringRe.length() - 1; i++) {
@@ -45,38 +60,39 @@ public class ReverseTheOddLengthWords {
 				j++;
 			}
 		}
-		
-		for (int i = 0; i < words.length ; i++) {
-			//einzelne Woerte aus dem String array words lesen
+
+		for (int i = 0; i < words.length; i++) {
+			// einzelne Woerte aus dem String array words lesen
 			wordString = words[i];
-			
-			//Wenn das Wort ungerade ist, das Wort Rueckwerts schreiben in wordSrting2
+
+			// Wenn das Wort ungerade ist, das Wort Rueckwerts schreiben in wordSrting2
 			if (wordString.length() % 2 != 0) {
 				for (int k = wordString.length() - 1; k >= 0; k--) {
 					wordString2 = wordString2 + wordString.charAt(k);
-					//System.out.println(wordString2);
-					
-					//das Rueckwerts geschriebene Wort in words[i] schreiben
+					// System.out.println(wordString2);
+
+					// das Rueckwerts geschriebene Wort in words[i] schreiben
 					words[i] = wordString2;
 
 				}
 			} else {
-				//Wenn gerade ist kann das Wort so bleiben
+				// Wenn gerade ist kann das Wort so bleiben
 				words[i] = wordString;
 
 			}
-			//die Rueckwerts geschriebenen Woerter wieder leer machen, damit beim naechsten Durchlauf wieder verwendbar
+			// die Rueckwerts geschriebenen Woerter wieder leer machen, damit beim naechsten
+			// Durchlauf wieder verwendbar
 			wordString2 = "";
 
 		}
-		//urspruenglichen ParameterString auf leer setzen
+		// urspruenglichen ParameterString auf leer setzen
 		stringRe = "";
-		//urspruenglichen ParameterString mit den neuen Woerten fuellen
+		// urspruenglichen ParameterString mit den neuen Woerten fuellen
 		for (int i = 0; i < words.length; i++) {
-			stringRe = stringRe + words[i] +" "; 
+			stringRe = stringRe + words[i] + " ";
 		}
 
-		//System.out.println(Arrays.toString(words));
+		// System.out.println(Arrays.toString(words));
 
 		return stringRe;
 	}
