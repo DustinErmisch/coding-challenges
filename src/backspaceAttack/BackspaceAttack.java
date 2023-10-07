@@ -30,32 +30,41 @@ public class BackspaceAttack {
 		erase("he##l#hel#llo"); // "hello"
 
 	}
-	public static void erase(String word1)
+	public static void erase(String word)
 	{
-		toArray(word1);
+		word = toArray(word,0);
+		System.out.println(word);
 		
 	}
-	public static void toArray(String word) {
-		int l = word.length();
+	public static String toArray(String word,int m) {
+		int l = word.length()-m;
 		String[] wordAr = null;
 		wordAr = new String[l];
 		
 		for (int i = 0; i < wordAr.length; i++) {
+			if(word.charAt(i)!= '%') {
 			wordAr[i] = ""+word.charAt(i);
+			}
 		}
 		System.out.println(Arrays.toString(wordAr));
-		System.out.println(Arrays.toString(delete(wordAr)));
+		word =delete(wordAr,m);
+		return word;
 	}
-	public static String[] delete(String[] wordAr) {
+	public static String delete(String[] wordAr, int m) {
+		String word ="";
 		for (int i = 0; i < wordAr.length; i++) {
 			if(wordAr[i].equals("#")) {
 				System.out.println("test");
 				wordAr[i] = "%";
 				wordAr[i-1]="%";
+				m =2;
 				break;
 			}
 		}
-		return wordAr;
+		for (int i = 0; i < wordAr.length; i++) {
+			word = word+wordAr[i];
+		}
+		return word;
 	}
 
 }
